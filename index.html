@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Weather Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Title of the app -->
+        <h1 class="title">Dynamic Weather Tracker</h1>
+
+        <!-- Search input and buttons -->
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name...">
+            <button onclick="getWeather()">Search</button>  
+            <!-- Calls getWeather() function to fetch weather for typed city. -->
+            <button class="geo-btn" onclick="getLocationWeather()">📍 Current</button>
+            <!-- Calls getLocationWeather() to fetch weather based on current GPS location. -->
+        </div>
+
+        <!-- Error message area -->
+        <p id="errorMsg" class="error-msg"></p>
+
+        <!-- Weather card (hidden by default, shown when weather is fetched) -->
+        <div class="weather-card" id="weatherCard" style="display:none;">
+            <div class="weather-icon">
+                <img id="weatherIcon" src="">
+            </div>
+
+            <h2 id="cityName"></h2>
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="windSpeed"></p>
+            <p id="condition"></p>
+        </div>
+    </div>
+    <script src="./config.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body styling with gradient background */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #a8d8ff, #d7baff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Main container */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+}
+
+/* Title animation */
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    animation: slideDown 0.8s ease;
+}
+
+/* Search box layout */
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    padding: 12px;
+    width: 60%;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-box button {
+    padding: 12px 20px;
+    background: #0066ff;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #004ecb;
+    transform: scale(1.05);
+}
+
+/* Error message */
+.error-msg {
+    color: red;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Weather card styling */
+.weather-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    animation: popUp 0.7s ease;
+}
+
+.weather-card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease;
+}
+
+/* Weather icon floating animation */
+.weather-icon img {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Buttons for geolocation */
+.geo-btn {
+    padding: 12px 18px;
+    background: #ff9500;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.geo-btn:hover {
+    background: #cc7800;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes popUp { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+@keyframes float { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
+
+/*
+fadeIn → Used on body, entire page fades in.
+
+slideDown → Title slides down into view.
+
+popUp → Weather card grows into view.
+
+float → Weather icon gently moves up and down (floating effect).
+
+*/
