@@ -2,6 +2,9 @@
 
 A responsive web application that fetches and displays **real-time weather information** for any city or the user's current location using the **OpenWeatherMap API**.
 
+## 📸 Preview
+![Dynamic Weather Tracker](screenshots/Dynamic_Weather_Tracker.png)
+
 ## 🚀 Features
 
 - 🔍 Search weather by city name
