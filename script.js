@@ -1,3 +1,4 @@
+const apiKey = "ab9d2871b5cab2f25cff3c75c9412994";
 
 /* Get weather for typed city */
 async function getWeather() {
